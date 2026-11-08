@@ -9,5 +9,16 @@
   "homepage": "https://github.com/jalcalaroot/claude-travel-planner-latam",
   "repository": "https://github.com/jalcalaroot/claude-travel-planner-latam",
   "license": "MIT",
-  "keywords": ["travel", "trip-planner", "flights", "hotels", "latam", "latin-america", "family-travel"]
+  "keywords": [
+    "travel",
+    "trip-planner",
+    "flights",
+    "hotels",
+    "latam",
+    "latin-america",
+    "family-travel"
+  ],
+  "documentationUrl": "https://github.com/jalcalaroot/claude-travel-planner-latam/blob/main/docs/install-claude-app.md",
+  "supportUrl": "https://github.com/jalcalaroot/claude-travel-planner-latam/issues",
+  "privacyPolicyUrl": "https://github.com/jalcalaroot/claude-travel-planner-latam/blob/main/PRIVACY.md"
 }

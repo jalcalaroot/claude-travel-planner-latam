@@ -97,6 +97,7 @@ See [examples/example-request.md](examples/example-request.md).
 
 - [CONTRIBUTING.md](CONTRIBUTING.md): how to propose changes.
 - [SECURITY.md](SECURITY.md): design principles and how to report a problem.
+- [PRIVACY.md](PRIVACY.md): what data moves where when you use the skill.
 - [CHANGELOG.md](CHANGELOG.md): version history.
 
 ## License
@@ -183,4 +184,4 @@ Mirá [examples/example-request.md](examples/example-request.md).
 
 ### Contribuir y seguridad
 
-Mirá [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) y [CHANGELOG.md](CHANGELOG.md).
+Mirá [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [PRIVACY.md](PRIVACY.md) y [CHANGELOG.md](CHANGELOG.md).

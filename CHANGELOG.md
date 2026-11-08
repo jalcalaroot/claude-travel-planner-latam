@@ -16,6 +16,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Flexible dates: the skill reads the calendar before it chooses dates.
 - Budget check: when nothing fits the budget, the skill says so and suggests what to change.
 - Reminder about basic fares that charge for bags.
+- Privacy policy (`PRIVACY.md`), and documentation, support and privacy links in `plugin.json`.
 
 ### Changed
 
