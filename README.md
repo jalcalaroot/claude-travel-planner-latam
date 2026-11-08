@@ -2,7 +2,7 @@
 
 [![Validate](https://github.com/jalcalaroot/claude-travel-planner-latam/actions/workflows/validate.yml/badge.svg)](https://github.com/jalcalaroot/claude-travel-planner-latam/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-0.1.1-informational)
+[![Release](https://img.shields.io/github/v/tag/jalcalaroot/claude-travel-planner-latam?label=version)](CHANGELOG.md)
 
 A Claude skill that compares flights, hotels and activities across several sources at once, built for travelers departing from Latin America.
 
@@ -12,23 +12,23 @@ A Claude skill that compares flights, hotels and activities across several sourc
 
 Without this skill, Claude can search travel sites, but each answer depends on how you ask. You can get one source, no comparison, or no reviews. With this skill:
 
-- **One request, a complete comparison.** Claude always checks two flight sources, hotels with reviews, and activities, without step-by-step instructions from you.
+- **One request, a complete comparison.** Claude checks two flight sources, hotels with reviews, and activities (when the connectors are connected), without step-by-step instructions from you.
 - **Better prices.** The same route is compared across sources, so you see differences that one site alone does not show.
 - **Fewer bad hotels.** Hotel options are checked against traveler reviews before they reach you.
 - **Made for Latin America.** It looks for regional airlines and connections (Panama, Sao Paulo, Bogota, Lima) and reminds you to compare local payment options, such as installments.
 - **Family friendly.** Children's ages, kid-friendly hotels and activities, and the Caribbean hurricane season are part of the process.
-- **Safe by design.** It never books or pays, and it treats website content as data, not as instructions.
+- **Safe by design.** It never books or pays, it only reads pages in the browser, and it treats website content as data, not as instructions.
 - **Same format every time.** You always get one table with the total price for the whole group, pros, cons and links to buy.
 
 ## Requirements
 
-A skill contains instructions only. **It cannot install connectors for you.** Before you use this skill, connect the following connectors from the Claude connector directory (in Claude: Settings, then Connectors). None of them requires an account.
+A skill contains instructions only. **It cannot install connectors for you.** Before you use this skill, add the following connectors to your Claude account at [claude.ai/customize/connectors](https://claude.ai/customize/connectors). The five travel connectors do not require an account with the travel company.
 
 ### Required connectors
 
 | Connector | Why it is needed |
 |---|---|
-| **Expedia** | Main source for flights, hotels and flight-plus-hotel packages. Strong coverage of the United States and the Caribbean. |
+| **Expedia** | Main source for flights and hotels. Strong coverage of the United States and the Caribbean. |
 | **eDreams** | Second flight source. The skill compares the same route against Expedia to find the best price. |
 | **Booking.com** | Main source for hotels, apartments and homes. |
 | **Tripadvisor** | Traveler reviews. The skill uses them to discard hotels with repeated complaints. |
@@ -39,9 +39,9 @@ Without the required connectors, the skill still works, but the comparison is we
 
 | Connector or tool | Why it helps |
 |---|---|
-| **Viator** | Activities and tours at the destination. Without it, the answer has no activity suggestions. |
-| **Claude in Chrome** | Lets Claude open Google Flights and airline websites in your browser to confirm prices and see the fare calendar. |
-| **Google Calendar** | Checks your calendar for conflicts with the trip dates. Uses your own Google account. |
+| **Viator** | Activities and tours at the destination. Without it, the answer has no activity suggestions. No account needed. |
+| **Claude in Chrome** | Lets Claude read Google Flights and airline websites in your browser to confirm prices and see the fare calendar. It only reads pages. |
+| **Google Calendar** | Reads your calendar to find conflicts with the trip dates. Uses your own Google account. It never creates events. |
 
 ## How it works
 
@@ -57,13 +57,13 @@ Without the required connectors, the skill still works, but the comparison is we
 
 ### Claude app (web, desktop)
 
-1. Connect the required connectors listed above.
+1. Add the required connectors listed above.
 2. Download this repository and create a ZIP file of the `skills/travel-planner-latam` folder.
 3. Upload the ZIP file as a custom skill. See [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude).
 
 ### Claude Code
 
-1. **Connect the connectors first** at [claude.ai/customize/connectors](https://claude.ai/customize/connectors), with the same Claude account that you use in Claude Code. Check them with `/mcp`.
+1. **Add the connectors first** at [claude.ai/customize/connectors](https://claude.ai/customize/connectors), with the same Claude account that you use in Claude Code. Check them with `/mcp`.
 2. Install the plugin:
 
 ```
@@ -75,9 +75,9 @@ Full step-by-step guide, with checks and troubleshooting: [docs/install-claude-c
 
 ## Make it yours
 
-Open `skills/travel-planner-latam/SKILL.md` and fill in the **Traveler profile** section: home airport, preferred airlines, hotel style, and whether you travel with children. If you leave the placeholders, Claude asks only for what it needs.
+Make a private copy of `skills/travel-planner-latam/SKILL.md` and fill in the **Traveler profile** section: home airport, preferred airlines, hotel style, and whether you travel with children. If you leave the placeholders, Claude asks only for what it needs.
 
-Keep your personal copy private if it contains private details.
+Do not publish your personal copy if it contains private details.
 
 ## Example
 
@@ -110,23 +110,23 @@ Una skill de Claude que compara vuelos, hoteles y actividades en varias fuentes 
 
 Sin la skill, Claude puede buscar en sitios de viaje, pero el resultado depende de cómo le pidas. Puede usar una sola fuente, no comparar o no mirar reseñas. Con la skill:
 
-- **Un pedido, una comparación completa.** Siempre revisa dos fuentes de vuelos, hoteles con reseñas y actividades, sin que tengas que pedir cada paso.
+- **Un pedido, una comparación completa.** Revisa dos fuentes de vuelos, hoteles con reseñas y actividades (si tenés los conectores), sin que tengas que pedir cada paso.
 - **Mejores precios.** Compara la misma ruta en varias fuentes y te muestra diferencias que un solo sitio no muestra.
 - **Menos hoteles malos.** Filtra los hoteles con reseñas de viajeros antes de mostrártelos.
 - **Pensada para Latinoamérica.** Busca aerolíneas y conexiones de la región (Panamá, San Pablo, Bogotá, Lima) y te recuerda comparar opciones de pago locales, como las cuotas.
 - **Para viajar en familia.** Tiene en cuenta las edades de los chicos, hoteles y actividades aptos para ellos y la temporada de huracanes del Caribe.
-- **Segura.** Nunca reserva ni paga, y trata el contenido de las webs como datos, no como instrucciones.
+- **Segura.** Nunca reserva ni paga, en el navegador solo lee páginas y trata el contenido de las webs como datos, no como instrucciones.
 - **Siempre el mismo formato.** Una tabla con el precio total para todo el grupo, pros, contras y links para comprar.
 
 ### Requisitos
 
-Una skill contiene solo instrucciones: **no puede instalar conectores por vos.** Antes de usarla, conectá estos conectores desde el directorio de Claude (en Claude: Configuración, Conectores). Ninguno pide cuenta.
+Una skill contiene solo instrucciones: **no puede instalar conectores por vos.** Antes de usarla, agregá estos conectores a tu cuenta de Claude en [claude.ai/customize/connectors](https://claude.ai/customize/connectors). Los cinco conectores de viaje no piden cuenta en la empresa de viajes.
 
 **Conectores necesarios**
 
 | Conector | Para qué se necesita |
 |---|---|
-| **Expedia** | Fuente principal de vuelos, hoteles y paquetes de vuelo más hotel. Muy fuerte en Estados Unidos y el Caribe. |
+| **Expedia** | Fuente principal de vuelos y hoteles. Muy fuerte en Estados Unidos y el Caribe. |
 | **eDreams** | Segunda fuente de vuelos. La skill compara la misma ruta contra Expedia para encontrar el mejor precio. |
 | **Booking.com** | Fuente principal de hoteles, departamentos y casas. |
 | **Tripadvisor** | Reseñas de viajeros. La skill las usa para descartar hoteles con quejas repetidas. |
@@ -137,19 +137,40 @@ Sin los conectores necesarios la skill igual funciona, pero la comparación es m
 
 | Conector o herramienta | Para qué sirve |
 |---|---|
-| **Viator** | Actividades y excursiones en destino. Sin él, la respuesta no sugiere actividades. |
-| **Claude in Chrome** | Permite abrir Google Flights y las webs de las aerolíneas en tu navegador para confirmar precios y ver el calendario de tarifas. |
-| **Google Calendar** | Revisa conflictos con las fechas del viaje. Usa tu propia cuenta de Google. |
+| **Viator** | Actividades y excursiones en destino. Sin él, la respuesta no sugiere actividades. No pide cuenta. |
+| **Claude in Chrome** | Permite leer Google Flights y las webs de las aerolíneas en tu navegador para confirmar precios y ver el calendario de tarifas. Solo lee páginas. |
+| **Google Calendar** | Lee tu calendario para detectar conflictos con las fechas del viaje. Usa tu propia cuenta de Google y nunca crea eventos. |
+
+### Cómo funciona
+
+1. **Perfil:** usa tu aeropuerto de salida, aerolíneas preferidas y estilo de viaje, o te los pregunta.
+2. **Fuentes:** revisa qué conectores hay y te avisa si falta alguno.
+3. **Vuelos:** busca la misma ruta en Expedia y eDreams, y confirma precios en Google Flights si hay navegador. Te deja tres opciones: la más barata, la más conveniente y la mejor con tu aerolínea preferida.
+4. **Hoteles:** busca en Booking.com y filtra las mejores opciones con reseñas de Tripadvisor. En el Caribe incluye una opción all inclusive.
+5. **Actividades:** sugiere de tres a cinco actividades de Viator.
+6. **Calendario y temporada:** revisa conflictos de fechas y avisa por la temporada de huracanes del Atlántico (junio a noviembre).
+7. **Resultado:** una tabla comparativa con el precio total para todo el grupo, pros, contras y links para comprar.
 
 ### Instalación
 
-- **App de Claude:** conectá los conectores necesarios, comprimí la carpeta `skills/travel-planner-latam` en un ZIP y subila como skill propia.
-- **Claude Code:** primero conectá los conectores en [claude.ai/customize/connectors](https://claude.ai/customize/connectors) con la misma cuenta que usás en Claude Code y verificalos con `/mcp`. Después usá los dos comandos `/plugin` de la sección *Installation*. Guía paso a paso: [docs/install-claude-code.md](docs/install-claude-code.md#guía-en-español).
+- **App de Claude:** agregá los conectores necesarios, comprimí la carpeta `skills/travel-planner-latam` en un ZIP y subila como skill propia.
+- **Claude Code:** primero agregá los conectores en [claude.ai/customize/connectors](https://claude.ai/customize/connectors) con la misma cuenta que usás en Claude Code y verificalos con `/mcp`. Después usá los dos comandos `/plugin` de la sección *Installation*. Guía paso a paso: [docs/install-claude-code.md](docs/install-claude-code.md#guía-en-español).
 
 ### Personalizala
 
-Abrí `skills/travel-planner-latam/SKILL.md` y completá la sección **Traveler profile**: aeropuerto de salida, aerolíneas preferidas, tipo de hotel y si viajás con chicos. No publiques tu copia personal si tiene datos privados.
+Hacé una copia privada de `skills/travel-planner-latam/SKILL.md` y completá la sección **Traveler profile**: aeropuerto de salida, aerolíneas preferidas, tipo de hotel y si viajás con chicos. No publiques tu copia personal si tiene datos privados.
+
+### Ejemplo
+
+Mirá [examples/example-request.md](examples/example-request.md).
 
 ### Límites
 
-Los precios cambian: confirmá el precio final en la web del vendedor antes de pagar. Confirmá visas y documentos en sitios oficiales. Este proyecto no está afiliado a Anthropic ni a ninguna aerolínea, hotel o agencia.
+- Los precios cambian: confirmá el precio final en la web del vendedor antes de pagar.
+- Los conectores los operan terceros. Si un conector cambia o deja de funcionar, los resultados pueden cambiar.
+- La skill no verifica requisitos de entrada. Confirmá visas, autorizaciones electrónicas y documentos de menores en sitios oficiales.
+- Este proyecto no está afiliado a Anthropic ni a ninguna aerolínea, hotel o agencia.
+
+### Contribuir y seguridad
+
+Mirá [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) y [CHANGELOG.md](CHANGELOG.md).

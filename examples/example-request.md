@@ -22,5 +22,5 @@ This example shows how to ask for a trip. The traveler data is fictional.
 | Preferred airline | `<...>` | `<...>` | `<USD ...>` | `<...>` | `<...>` | `<...>` |
 
 - Three to five activities suitable for children.
-- A warning if the dates fall in the hurricane season.
+- A warning if the dates fall in the Atlantic hurricane season (June to November). This example is in January, so no warning is expected.
 - Reminders to compare local installments and to confirm entry requirements on official websites.

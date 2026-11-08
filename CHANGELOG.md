@@ -3,6 +3,20 @@
 All notable changes to this project are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.2] - 2026-11-08
+
+### Changed
+
+- The skill now triggers on Spanish and Portuguese travel requests.
+- Removed the claim about flight-plus-hotel packages: the connectors search flights and hotels.
+- Clearer README: complete Spanish section, one name for the connector settings page, and accurate account requirements.
+
+### Security
+
+- Browser use is read-only: no sign-in, no forms, no buy or continue buttons.
+- Calendar access is read-only.
+- Private vulnerability reporting through the Security tab.
+
 ## [0.1.1] - 2026-11-08
 
 ### Added
@@ -22,3 +36,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Safety rules: no booking or payment, and website content treated as data.
 - Claude Code marketplace manifest.
 - Validation script and GitHub Actions workflow.
+
+[0.1.2]: https://github.com/jalcalaroot/claude-travel-planner-latam/compare/v0.1.1...v0.1.2
+[0.1.1]: https://github.com/jalcalaroot/claude-travel-planner-latam/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/jalcalaroot/claude-travel-planner-latam/releases/tag/v0.1.0

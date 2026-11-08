@@ -13,14 +13,14 @@ This guide installs the `travel-planner-latam` skill in Claude Code and connects
 
 A plugin or a skill **cannot install connectors for you.** The travel connectors are added once to your Claude account. After that, Claude Code reads them from your account and they are available in your sessions.
 
-## Step 1: Connect the travel connectors
+## Step 1: Add the travel connectors
 
 1. Open [claude.ai/customize/connectors](https://claude.ai/customize/connectors).
-2. Browse the connector directory and connect each of these connectors. None of them requires an account.
+2. Browse the connector directory and add each of these connectors. None of them requires an account with the travel company.
 
    | Connector | Needed | Why |
    |---|---|---|
-   | Expedia | Required | Flights, hotels and packages |
+   | Expedia | Required | Flights and hotels |
    | eDreams | Required | Second flight source, to compare prices |
    | Booking.com | Required | Hotels, apartments and homes |
    | Tripadvisor | Required | Reviews, to discard bad hotels |
@@ -79,7 +79,7 @@ Claude first tells you if a connector is missing, then compares flights, hotels 
 To save your home airport, preferred airlines and travel style:
 
 1. Copy the folder `skills/travel-planner-latam` to `~/.claude/skills/my-travel-planner`.
-2. In the copied `SKILL.md`, change `name: travel-planner-latam` to `name: my-travel-planner`, so that it does not conflict with the plugin.
+2. In the copied `SKILL.md`, change `name: travel-planner-latam` to `name: my-travel-planner`, so that you can tell your copy apart from the plugin.
 3. Fill in the **Traveler profile** section.
 4. Uninstall the plugin if you only want to use your personal copy, and keep that copy private.
 
@@ -96,9 +96,9 @@ To save your home airport, preferred airlines and travel style:
 
 Un plugin o una skill **no puede instalar conectores por vos.** Los conectores de viaje se agregan una sola vez a tu cuenta de Claude, y después Claude Code los toma de tu cuenta.
 
-### Paso 1: Conectar los conectores
+### Paso 1: Agregar los conectores
 
-Entrá a [claude.ai/customize/connectors](https://claude.ai/customize/connectors) y conectá **Expedia, eDreams, Booking.com y Tripadvisor** (necesarios) y **Viator** (recomendado). Ninguno pide cuenta.
+Entrá a [claude.ai/customize/connectors](https://claude.ai/customize/connectors) y agregá **Expedia, eDreams, Booking.com y Tripadvisor** (necesarios) y **Viator** (recomendado). Ninguno pide cuenta en la empresa de viajes.
 
 ### Paso 2: Verificarlos en Claude Code
 
@@ -119,4 +119,4 @@ Corré `/plugin` para confirmar que está instalado y habilitado. Después pedí
 
 ### Personalizarla (opcional)
 
-Copiá la carpeta `skills/travel-planner-latam` a `~/.claude/skills/my-travel-planner`, cambiá en el `SKILL.md` copiado `name: travel-planner-latam` por `name: my-travel-planner` para que no choque con el plugin, completá la sección **Traveler profile** y mantené esa copia privada. Si solo vas a usar tu copia, desinstalá el plugin.
+Copiá la carpeta `skills/travel-planner-latam` a `~/.claude/skills/my-travel-planner`, cambiá en el `SKILL.md` copiado `name: travel-planner-latam` por `name: my-travel-planner` para distinguirla del plugin, completá la sección **Traveler profile** y mantené esa copia privada. Si solo vas a usar tu copia, desinstalá el plugin.

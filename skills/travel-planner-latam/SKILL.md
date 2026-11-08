@@ -1,6 +1,6 @@
 ---
 name: travel-planner-latam
-description: Compare flights, hotels and activities across several travel sources at once for travelers departing from Latin America. Use when the user asks to plan a trip, find or compare flights or hotels, build a vacation budget, or choose between destinations, especially trips that start in Latin America.
+description: Compare flights, hotels and activities across several travel sources at once for travelers departing from Latin America. Use when the user asks to plan a trip or vacation, find or compare flights or hotels, build a travel budget, or choose between destinations, including requests in Spanish or Portuguese (viaje, vacaciones, vuelos, pasajes, hoteles, passagens, viagem, hospedagem).
 license: MIT. Complete terms in LICENSE in the repository root.
 ---
 
@@ -12,7 +12,9 @@ Always answer in the user's language (Spanish, Portuguese or English).
 
 ## 1. Traveler profile
 
-Fill in this section in your own copy of the skill to avoid repeating yourself. If a field still shows `<...>`, ask the user for it only when the search needs it, and do not invent values.
+<!-- Users: fill in these fields in your own private copy of the skill, so that Claude does not ask for them every time. -->
+
+Use these values when they are filled in. If a field still shows `<...>`, ask the user for it only when the search needs it, and do not invent values.
 
 - Home airport: `<for example EZE, GRU, SCL, BOG, LIM, MEX>`
 - Preferred airlines: `<for example Copa Airlines, Aerolineas Argentinas, GOL, LATAM, Avianca>`
@@ -27,7 +29,7 @@ Before the first search, check which travel tools are available in the session. 
 
 | Connector | Used for |
 |---|---|
-| Expedia | Flights, hotels and packages |
+| Expedia | Flights and hotels |
 | eDreams | Flights |
 | Booking.com | Hotels |
 | Tripadvisor | Hotel reviews |
@@ -57,11 +59,11 @@ Use the tools that are available in the session. Skip a step only if none of its
    - Search a hotel source (for example the Booking.com connector) with the destination, dates and guests.
    - Check the best candidates against reviews (for example the Tripadvisor connector). Discard hotels with repeated complaints about cleanliness, safety or service.
    - For Caribbean destinations, include at least one all-inclusive option when it fits the budget.
-   - If flight-plus-hotel packages are available (for example in Expedia), compare them against booking separately.
+   - If a source returns flight-plus-hotel packages, compare them against booking the flight and the hotel separately.
 3. **Activities**
    - Suggest three to five activities from an activities source (for example the Viator connector). If the group includes children, choose activities that are suitable for them.
 4. **Calendar**
-   - If a calendar connector is available, check the trip dates and warn the user about conflicts.
+   - If a calendar connector is available, read the trip dates and warn the user about conflicts.
 5. **Season and risks**
    - For the Caribbean and the Gulf of Mexico, warn when dates fall in the Atlantic hurricane season (June to November).
 
@@ -74,6 +76,8 @@ Use the tools that are available in the session. Skip a step only if none of its
 ## 6. Rules
 
 - Never book, reserve or pay. You only search and compare. The user buys on the airline, hotel or agency website.
+- In a browser, only read pages. Do not sign in, fill in forms, select fares or seats, or click buttons such as "Book", "Buy", "Continue" or "Continue to payment".
+- Calendar access is read-only. Do not create, change or delete events.
 - Always remind the user to:
   - compare local payment options (installments and bank promotions) on local sites before buying;
   - confirm entry requirements (visas, electronic travel authorizations, documents for minors, taxes) on official government websites.
