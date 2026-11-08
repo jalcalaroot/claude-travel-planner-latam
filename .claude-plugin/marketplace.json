@@ -1,4 +1,5 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-travel-planner-latam",
   "owner": {
     "name": "Johan Alcala",
@@ -6,18 +7,16 @@
   },
   "metadata": {
     "description": "A Claude skill that compares flights, hotels and activities across several sources at once, built for travelers departing from Latin America.",
-    "version": "0.1.2"
+    "version": "0.1.3"
   },
   "plugins": [
     {
       "name": "travel-planner-latam",
       "description": "Compare flights, hotels and activities across several travel sources at once, for travelers departing from Latin America. It never books or pays.",
-      "version": "0.1.2",
+      "version": "0.1.3",
+      "category": "travel",
       "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/travel-planner-latam"
-      ]
+      "homepage": "https://github.com/jalcalaroot/claude-travel-planner-latam"
     }
   ]
 }

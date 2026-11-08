@@ -1,0 +1,13 @@
+{
+  "name": "travel-planner-latam",
+  "version": "0.1.3",
+  "description": "Compare flights, hotels and activities across several travel sources at once, built for travelers departing from Latin America. It never books or pays.",
+  "author": {
+    "name": "Johan Alcala",
+    "url": "https://github.com/jalcalaroot"
+  },
+  "homepage": "https://github.com/jalcalaroot/claude-travel-planner-latam",
+  "repository": "https://github.com/jalcalaroot/claude-travel-planner-latam",
+  "license": "MIT",
+  "keywords": ["travel", "trip-planner", "flights", "hotels", "latam", "latin-america", "family-travel"]
+}

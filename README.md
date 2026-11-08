@@ -55,27 +55,30 @@ Without the required connectors, the skill still works, but the comparison is we
 
 ## Installation
 
-### Claude app (web, desktop)
+### Claude app (recommended)
 
-1. Add the required connectors listed above.
-2. Download this repository and create a ZIP file of the `skills/travel-planner-latam` folder.
-3. Upload the ZIP file as a custom skill. See [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude).
+Trip planning is a conversation, so the Claude app (web, desktop or mobile) is the best place to use this skill.
+
+1. **Add the connectors first** at [claude.ai/customize/connectors](https://claude.ai/customize/connectors).
+2. In the app, open **Customize**, then **Plugins**, select **Add marketplace**, and enter `jalcalaroot/claude-travel-planner-latam`.
+3. Install the **travel-planner-latam** plugin and start a new conversation.
+
+Full step-by-step guide, with an option to upload the skill as a file: [docs/install-claude-app.md](docs/install-claude-app.md).
 
 ### Claude Code
 
-1. **Add the connectors first** at [claude.ai/customize/connectors](https://claude.ai/customize/connectors), with the same Claude account that you use in Claude Code. Check them with `/mcp`.
-2. Install the plugin:
+For people who prefer the terminal, or who want to work on the skill:
 
 ```
 /plugin marketplace add jalcalaroot/claude-travel-planner-latam
 /plugin install travel-planner-latam@claude-travel-planner-latam
 ```
 
-Full step-by-step guide, with checks and troubleshooting: [docs/install-claude-code.md](docs/install-claude-code.md).
+Add the connectors first with the same Claude account. Full guide, with checks and troubleshooting: [docs/install-claude-code.md](docs/install-claude-code.md).
 
 ## Make it yours
 
-Make a private copy of `skills/travel-planner-latam/SKILL.md` and fill in the **Traveler profile** section: home airport, preferred airlines, hotel style, and whether you travel with children. If you leave the placeholders, Claude asks only for what it needs.
+Make a private copy of `skills/travel-planner-latam/SKILL.md`, fill in the **Traveler profile** section: home airport, preferred airlines, hotel style, and whether you travel with children, and upload it as a file (see the app guide). If you leave the placeholders, Claude asks only for what it needs.
 
 Do not publish your personal copy if it contains private details.
 
@@ -153,8 +156,15 @@ Sin los conectores necesarios la skill igual funciona, pero la comparación es m
 
 ### Instalación
 
-- **App de Claude:** agregá los conectores necesarios, comprimí la carpeta `skills/travel-planner-latam` en un ZIP y subila como skill propia.
-- **Claude Code:** primero agregá los conectores en [claude.ai/customize/connectors](https://claude.ai/customize/connectors) con la misma cuenta que usás en Claude Code y verificalos con `/mcp`. Después usá los dos comandos `/plugin` de la sección *Installation*. Guía paso a paso: [docs/install-claude-code.md](docs/install-claude-code.md#guía-en-español).
+**App de Claude (recomendada).** Planificar un viaje es una conversación, así que la app de Claude (web, escritorio o celular) es el mejor lugar para usar esta skill.
+
+1. **Primero agregá los conectores** en [claude.ai/customize/connectors](https://claude.ai/customize/connectors).
+2. En la app, abrí **Customize**, después **Plugins**, elegí **Add marketplace** y escribí `jalcalaroot/claude-travel-planner-latam`.
+3. Instalá el plugin **travel-planner-latam** y abrí una conversación nueva.
+
+Guía paso a paso, con la opción de subir la skill como archivo: [docs/install-claude-app.md](docs/install-claude-app.md#guía-en-español).
+
+**Claude Code.** Para quien prefiere la terminal o quiere trabajar sobre la skill: agregá los conectores con la misma cuenta y usá los dos comandos `/plugin` de la sección *Installation*. Guía completa: [docs/install-claude-code.md](docs/install-claude-code.md#guía-en-español).
 
 ### Personalizala
 

@@ -2,7 +2,9 @@
 
 Checks:
 - .claude-plugin/marketplace.json is valid JSON with the required fields.
-- Every listed skill folder exists and contains SKILL.md.
+- .claude-plugin/plugin.json is valid JSON with a name and a version, and the
+  version matches the marketplace entry.
+- Every folder in skills/ contains SKILL.md.
 - SKILL.md has YAML frontmatter with a valid name and a description.
 - The skill name matches its folder name.
 
@@ -76,8 +78,28 @@ def main() -> int:
         for field in ("name", "description", "source"):
             if field not in plugin:
                 fail(f"marketplace.json: plugin missing '{field}'")
-        for skill in plugin.get("skills", []):
-            check_skill((ROOT / skill).resolve())
+
+    plugin_path = ROOT / ".claude-plugin" / "plugin.json"
+    try:
+        plugin_manifest = json.loads(plugin_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        fail(f"cannot read {plugin_path}: {exc}")
+        plugin_manifest = {}
+    for field in ("name", "version", "description"):
+        if field not in plugin_manifest:
+            fail(f"plugin.json: missing '{field}'")
+    entries = {p.get("name"): p for p in manifest.get("plugins", [])}
+    entry = entries.get(plugin_manifest.get("name"))
+    if entry is None:
+        fail("marketplace.json: no entry matches the name in plugin.json")
+    elif entry.get("version") and entry.get("version") != plugin_manifest.get("version"):
+        fail("marketplace.json and plugin.json have different versions")
+
+    skill_dirs = sorted(p for p in (ROOT / "skills").iterdir() if p.is_dir())
+    if not skill_dirs:
+        fail("no skills found in skills/")
+    for skill_dir in skill_dirs:
+        check_skill(skill_dir)
 
     if errors:
         for message in errors:

@@ -1,6 +1,6 @@
 # Install guide: Claude Code
 
-This guide installs the `travel-planner-latam` skill in Claude Code and connects the travel connectors it uses.
+This guide installs the `travel-planner-latam` skill in Claude Code. For most people, the Claude app is the better place to plan trips: see [install-claude-app.md](install-claude-app.md).
 
 > [Guía en español](#guía-en-español)
 
@@ -53,6 +53,8 @@ You can also run the same commands from your terminal:
 claude plugin marketplace add jalcalaroot/claude-travel-planner-latam
 claude plugin install travel-planner-latam@claude-travel-planner-latam
 ```
+
+**If you see "/plugin isn't available in this environment"** (for example, in the VS Code extension), run the terminal commands above in a terminal, then start a new conversation or run `/reload-plugins`.
 
 ## Step 4: Check the installation
 
@@ -110,6 +112,8 @@ Abrí Claude Code, corré `/mcp` y confirmá que aparecen con nombres que empiez
 /plugin marketplace add jalcalaroot/claude-travel-planner-latam
 /plugin install travel-planner-latam@claude-travel-planner-latam
 ```
+
+**Si ves "/plugin isn't available in this environment"** (por ejemplo, en la extensión de VS Code), corré en una terminal los mismos comandos sin la barra: `claude plugin marketplace add ...` y `claude plugin install ...`. Después abrí una conversación nueva o corré `/reload-plugins`.
 
 ### Paso 4: Verificar y probar
 

@@ -3,6 +3,19 @@
 All notable changes to this project are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] - 2026-11-08
+
+### Added
+
+- Install guide for the Claude app (`docs/install-claude-app.md`), in English and Spanish. The app is now the recommended way to use the skill.
+- Plugin manifest (`.claude-plugin/plugin.json`) and plugin icon, so the plugin can be submitted to Anthropic's plugin directory.
+- Troubleshooting for "/plugin isn't available in this environment" in the Claude Code guide.
+
+### Changed
+
+- README: the Claude app comes first in the installation section.
+- The validation script checks `plugin.json` and every skill in `skills/`.
+
 ## [0.1.2] - 2026-11-08
 
 ### Changed
@@ -37,6 +50,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Claude Code marketplace manifest.
 - Validation script and GitHub Actions workflow.
 
+[0.1.3]: https://github.com/jalcalaroot/claude-travel-planner-latam/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/jalcalaroot/claude-travel-planner-latam/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/jalcalaroot/claude-travel-planner-latam/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/jalcalaroot/claude-travel-planner-latam/releases/tag/v0.1.0
