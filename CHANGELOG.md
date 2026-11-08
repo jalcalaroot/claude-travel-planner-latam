@@ -19,6 +19,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ### Changed
 
+- The validation script moved into the GitHub Actions workflow, so the plugin folder holds no scripts. The plugin directory will later accept scripts only from Verified organizations.
 - Browser rule: the skill may type into search fields and use search filters, but it still never signs in, enters personal or payment data, selects a fare to buy, or goes to checkout.
 
 ## [0.1.3] - 2026-11-08
