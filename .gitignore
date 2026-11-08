@@ -1,0 +1,10 @@
+# Personal copies of the skill
+*.personal.md
+personal/
+
+# Packaged files
+*.zip
+
+# Python and OS files
+__pycache__/
+.DS_Store

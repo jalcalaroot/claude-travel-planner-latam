@@ -1,0 +1,22 @@
+{
+  "name": "claude-travel-planner-latam",
+  "owner": {
+    "name": "Johan Alcala",
+    "url": "https://github.com/jalcalaroot"
+  },
+  "metadata": {
+    "description": "A Claude skill that compares flights, hotels and activities across several sources at once, built for travelers departing from Latin America.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "travel-planner-latam",
+      "description": "Compare flights, hotels and activities across several travel sources at once, for travelers departing from Latin America. It never books or pays.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/travel-planner-latam"
+      ]
+    }
+  ]
+}
