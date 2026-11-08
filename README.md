@@ -2,7 +2,7 @@
 
 [![Validate](https://github.com/jalcalaroot/claude-travel-planner-latam/actions/workflows/validate.yml/badge.svg)](https://github.com/jalcalaroot/claude-travel-planner-latam/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-0.1.0-informational)
+![Version](https://img.shields.io/badge/version-0.1.1-informational)
 
 A Claude skill that compares flights, hotels and activities across several sources at once, built for travelers departing from Latin America.
 
@@ -63,12 +63,15 @@ Without the required connectors, the skill still works, but the comparison is we
 
 ### Claude Code
 
+1. **Connect the connectors first** at [claude.ai/customize/connectors](https://claude.ai/customize/connectors), with the same Claude account that you use in Claude Code. Check them with `/mcp`.
+2. Install the plugin:
+
 ```
 /plugin marketplace add jalcalaroot/claude-travel-planner-latam
 /plugin install travel-planner-latam@claude-travel-planner-latam
 ```
 
-The connectors must also be available in your Claude Code session.
+Full step-by-step guide, with checks and troubleshooting: [docs/install-claude-code.md](docs/install-claude-code.md).
 
 ## Make it yours
 
@@ -141,7 +144,7 @@ Sin los conectores necesarios la skill igual funciona, pero la comparación es m
 ### Instalación
 
 - **App de Claude:** conectá los conectores necesarios, comprimí la carpeta `skills/travel-planner-latam` en un ZIP y subila como skill propia.
-- **Claude Code:** usá los dos comandos `/plugin` de la sección *Installation*. Los conectores también tienen que estar disponibles en tu sesión.
+- **Claude Code:** primero conectá los conectores en [claude.ai/customize/connectors](https://claude.ai/customize/connectors) con la misma cuenta que usás en Claude Code y verificalos con `/mcp`. Después usá los dos comandos `/plugin` de la sección *Installation*. Guía paso a paso: [docs/install-claude-code.md](docs/install-claude-code.md#guía-en-español).
 
 ### Personalizala
 
