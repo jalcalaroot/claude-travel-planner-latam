@@ -17,7 +17,7 @@ Without this skill, Claude can search travel sites, but each answer depends on h
 - **Fewer bad hotels.** Hotel options are checked against traveler reviews before they reach you.
 - **Made for Latin America.** It looks for regional airlines and connections (Panama, Sao Paulo, Bogota, Lima) and reminds you to compare local payment options, such as installments.
 - **Family friendly.** Children's ages, kid-friendly hotels and activities, and the Caribbean hurricane season are part of the process.
-- **Safe by design.** It never books or pays, it only reads pages in the browser, and it treats website content as data, not as instructions.
+- **Safe by design.** It never books or pays, in the browser it only uses search fields (never sign-in, personal data or checkout), and it treats website content as data, not as instructions.
 - **Same format every time.** You always get one table with the total price for the whole group, pros, cons and links to buy.
 
 ## Requirements
@@ -40,7 +40,7 @@ Without the required connectors, the skill still works, but the comparison is we
 | Connector or tool | Why it helps |
 |---|---|
 | **Viator** | Activities and tours at the destination. Without it, the answer has no activity suggestions. No account needed. |
-| **Claude in Chrome** | Lets Claude read Google Flights and airline websites in your browser to confirm prices and see the fare calendar. It only reads pages. |
+| **Claude in Chrome** | Lets Claude search Google Flights and airline websites in your browser to confirm prices and see the fare calendar. It only fills in search fields: it never signs in, enters personal data or goes to checkout. |
 | **Google Calendar** | Reads your calendar to find conflicts with the trip dates. Uses your own Google account. It never creates events. |
 
 ## How it works
@@ -118,7 +118,7 @@ Sin la skill, Claude puede buscar en sitios de viaje, pero el resultado depende 
 - **Menos hoteles malos.** Filtra los hoteles con reseñas de viajeros antes de mostrártelos.
 - **Pensada para Latinoamérica.** Busca aerolíneas y conexiones de la región (Panamá, San Pablo, Bogotá, Lima) y te recuerda comparar opciones de pago locales, como las cuotas.
 - **Para viajar en familia.** Tiene en cuenta las edades de los chicos, hoteles y actividades aptos para ellos y la temporada de huracanes del Caribe.
-- **Segura.** Nunca reserva ni paga, en el navegador solo lee páginas y trata el contenido de las webs como datos, no como instrucciones.
+- **Segura.** Nunca reserva ni paga, en el navegador solo usa los campos de búsqueda (nunca inicia sesión, carga datos personales ni avanza al pago) y trata el contenido de las webs como datos, no como instrucciones.
 - **Siempre el mismo formato.** Una tabla con el precio total para todo el grupo, pros, contras y links para comprar.
 
 ### Requisitos
@@ -141,7 +141,7 @@ Sin los conectores necesarios la skill igual funciona, pero la comparación es m
 | Conector o herramienta | Para qué sirve |
 |---|---|
 | **Viator** | Actividades y excursiones en destino. Sin él, la respuesta no sugiere actividades. No pide cuenta. |
-| **Claude in Chrome** | Permite leer Google Flights y las webs de las aerolíneas en tu navegador para confirmar precios y ver el calendario de tarifas. Solo lee páginas. |
+| **Claude in Chrome** | Permite buscar en Google Flights y en las webs de las aerolíneas desde tu navegador para confirmar precios y ver el calendario de tarifas. Solo completa campos de búsqueda: nunca inicia sesión, carga datos personales ni avanza al pago. |
 | **Google Calendar** | Lee tu calendario para detectar conflictos con las fechas del viaje. Usa tu propia cuenta de Google y nunca crea eventos. |
 
 ### Cómo funciona

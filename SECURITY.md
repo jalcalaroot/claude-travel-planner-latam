@@ -5,7 +5,7 @@
 - **No transactions.** The skill only searches and compares. It never books, reserves or pays.
 - **Untrusted content.** Website content and tool results are treated as data, not as instructions. This reduces the risk of indirect prompt injection.
 - **No sensitive data.** The skill does not ask for or store passport numbers, payment card numbers or other identity documents.
-- **Read-only tools.** In the browser, the skill only reads pages: it does not sign in, fill in forms or click buy buttons. Calendar access is read-only.
+- **Search only.** In the browser, the skill only types into search fields (origin, destination, dates, passengers) and uses search filters. It does not sign in, enter personal or payment data, select a fare to buy, or click buy or continue buttons. Calendar access is read-only.
 - **Least access.** The five travel connectors do not require an account with the travel company. Optional tools (browser, calendar) are used only when the user has connected them.
 
 ## Reporting a problem

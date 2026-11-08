@@ -46,15 +46,24 @@ Ask in one single question for anything missing from this list:
 - number of adults, and ages of any children;
 - approximate budget (total or per person).
 
-## 4. Search procedure
+If the user gives a flexible range (for example "one week in January"), read the calendar first, when a calendar connector is available, and choose dates that do not conflict with existing trips or events. Tell the user which dates you chose and why.
+
+## 4. How to call the sources
+
+- **Connector errors:** if a search fails with an unknown or generic error, retry it once with fewer optional parameters: use the English locale (`en-US`), and remove filters such as the maximum number of stops. Then apply those filters yourself to the results. If it fails again, say so and continue with the other sources.
+- **Widget-only results:** some connectors show their results in an interactive widget and do not return the prices to you (for example, a response that only says "Found 15 itineraries"). Do not invent or estimate those prices. Tell the user that the results from that source are in its widget, and build the table only with the prices that you can read.
+- **Prices for the whole group:** check whether each price is per person or for the whole group, and always show the total for the whole group.
+
+## 5. Search procedure
 
 Use the tools that are available in the session. Skip a step only if none of its sources is available, and say so in the answer.
 
 1. **Flights**
    - Search the same route and dates in at least two flight sources (for example the Expedia and eDreams connectors).
-   - If a browser tool is available (for example Claude in Chrome), open Google Flights in a new tab to confirm prices and check the fare calendar.
+   - Optional: if a browser tool is available (for example Claude in Chrome), open Google Flights in a new tab to confirm prices and check the fare calendar. Opening a Google Flights link with the search in the URL usually shows the home page, not results: type the origin, destination, dates and passengers in the search fields.
    - Look for typical regional connections: Panama (Copa), Sao Paulo or Rio de Janeiro (GOL, LATAM), Bogota (Avianca), Lima (LATAM), and direct flights from the home airport.
    - Keep three options: the cheapest, the most convenient (fewest stops and reasonable schedules), and the best one with a preferred airline.
+   - Check what the fare includes. Basic fares often charge for carry-on and checked bags; mention it.
 2. **Hotels**
    - Search a hotel source (for example the Booking.com connector) with the destination, dates and guests.
    - Check the best candidates against reviews (for example the Tripadvisor connector). Discard hotels with repeated complaints about cleanliness, safety or service.
@@ -67,16 +76,17 @@ Use the tools that are available in the session. Skip a step only if none of its
 5. **Season and risks**
    - For the Caribbean and the Gulf of Mexico, warn when dates fall in the Atlantic hurricane season (June to November).
 
-## 5. Output
+## 6. Output
 
 - A comparison table with: option, flight, hotel, estimated total price for the whole group, pros, cons, and links to buy.
 - State the source and the time of every price. Prices can change before payment.
 - A short recommendation of two or three lines.
+- If no combination fits the budget, say so clearly, show how far over the budget the best options are, and suggest what to change: other dates, a nearby destination, a different airline, or a lower hotel category.
 
-## 6. Rules
+## 7. Rules
 
 - Never book, reserve or pay. You only search and compare. The user buys on the airline, hotel or agency website.
-- In a browser, only read pages. Do not sign in, fill in forms, select fares or seats, or click buttons such as "Book", "Buy", "Continue" or "Continue to payment".
+- In a browser, you may type into search fields (origin, destination, dates, passengers) and use search filters. Do not sign in, enter personal or payment data, select a fare or seat to buy, or click buttons such as "Book", "Buy", "Select", "Continue" or "Continue to payment".
 - Calendar access is read-only. Do not create, change or delete events.
 - Always remind the user to:
   - compare local payment options (installments and bank promotions) on local sites before buying;
